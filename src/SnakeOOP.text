@@ -1,0 +1,61 @@
+Snake Program Notes(OOP)
+Util Classes:
+- BlockType
+	consist of FOOD,SNAKE,and EMPTY
+- Block:
+  holds position and block type.
+	Method:
+	-getType()
+	-getPosition()
+- Position:
+  holds 2D position value(x,y)	
+	Method:
+	-getX()
+	-getY()
+- Node extends Block:
+  holds pointer to next node and prev node.
+	Method:
+	-getNext()
+	-getPrev()
+- Queue:
+  holds pointer to the head and tail of queue.
+	Method:
+	-push
+	-pop
+	-getHead
+
+Class:
+-Snake:
+ holds a queue, length, and direction
+ constructed by pushing 5 nodes
+	Method:
+	-getLength()
+	-getDir()
+	-getHeadPos()
+	-moveElongate()//kalo snake jalan sambil makan, next stepnya cumen push aja
+	-move()//move biasa 1 kali push 1 kali pop
+-Food extends Block:
+  	Method:
+	-generateFood()//kalo kemakan
+-Grid(area gamenya):
+ holds Snake, Food, Block[GRID_SIZE][GRID_SIZE]
+	Method:
+	-getSnake()
+	-getFood()
+
+-Main:
+ inside while(true){
+
+ display grid
+ if(food eaten){
+    Grid.snake.moveElongate();
+    Grid.food.generateNewFood();
+ }
+ if(//dying conditions){
+    break;
+ }
+
+ }
+
+
+		
