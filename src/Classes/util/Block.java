@@ -1,9 +1,6 @@
 package Classes.util;
 
-import Classes.util.BlockType;
-import Classes.util.Position;
-
-public abstract class Block {
+public class Block {
     Position position;
     BlockType type;
 

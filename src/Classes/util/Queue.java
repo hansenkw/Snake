@@ -60,8 +60,9 @@ public class Queue implements Iterable<Position> {
 
         @Override
         public Position next() {
-            return curr.next.getNext().getPosition();
+            return (Position) curr.next.getPosition();
         }
+        //have to check for validity later
     }
 }
 

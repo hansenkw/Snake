@@ -3,7 +3,7 @@ import Classes.util.Node;
 import Classes.util.Position;
 import Classes.util.Queue;
 public class Snake {
-    Queue snake;
+    Queue queue;
     int length;
     Direction dir;
 
@@ -14,12 +14,12 @@ public class Snake {
     Snake() {
         this.length = 5;
         this.dir = Direction.RIGHT;
-        this.snake = new Queue();
-        this.snake.push(new Node(6, 4));
-        this.snake.push(new Node(7, 4));
-        this.snake.push(new Node(8, 4));
-        this.snake.push(new Node(9, 4));
-        this.snake.push(new Node(10, 4));
+        this.queue = new Queue();
+        this.queue.push(new Node(6, 4));
+        this.queue.push(new Node(7, 4));
+        this.queue.push(new Node(8, 4));
+        this.queue.push(new Node(9, 4));
+        this.queue.push(new Node(10, 4));
     }
 
     public int getLength() {
@@ -31,7 +31,7 @@ public class Snake {
     }
 
     public Position getHeadPos() {
-        return this.snake.getHead().getPosition();
+        return this.queue.getHead().getPosition();
     }
 
     public void moveElongate() {
@@ -39,22 +39,22 @@ public class Snake {
         int ynow = getHeadPos().getY();
         switch (this.dir) {
             case RIGHT:
-                this.snake.push(new Node(xnow + 1, ynow));
+                this.queue.push(new Node(xnow + 1, ynow));
                 break;
             case LEFT:
-                this.snake.push(new Node(xnow - 1, ynow));
+                this.queue.push(new Node(xnow - 1, ynow));
                 break;
             case UP:
-                this.snake.push(new Node(xnow, ynow + 1));
+                this.queue.push(new Node(xnow, ynow + 1));
                 break;
             case DOWN:
-                this.snake.push(new Node(xnow, ynow - 1));
+                this.queue.push(new Node(xnow, ynow - 1));
         }
     }
 
     public void move(){
         moveElongate();
-        this.snake.pop();
+        this.queue.pop();
     }
 
 
@@ -63,6 +63,6 @@ public class Snake {
 ////    }
 ////    public void change_dir{
 //
-//      }
+//      
 }
 
