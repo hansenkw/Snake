@@ -1,2 +1,2 @@
 # Snake
-Developing a snake game object-oriented based.
+Developing an object-oriented based Snake game
